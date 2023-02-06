@@ -18,7 +18,7 @@ export class AppController {
     if (this.appService.login(data)){
       return response.status(HttpStatus.OK).send("Good");
     }else{
-      return response.status(HttpStatus.BAD_REQUEST).send("NOT GOOD");
+       return response.status(HttpStatus.BAD_REQUEST).send("NOT GOOD");
     }
    
   }

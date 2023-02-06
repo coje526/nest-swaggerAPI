@@ -11,12 +11,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
+var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppController = void 0;
 const common_1 = require("@nestjs/common");
 const swagger_1 = require("@nestjs/swagger");
 const app_service_1 = require("./app.service");
 const create_user_dto_1 = require("./dto/create-user.dto");
+const express_1 = require("express");
 let AppController = class AppController {
     constructor(appService) {
         this.appService = appService;
@@ -45,7 +47,7 @@ __decorate([
     __param(0, (0, common_1.Body)()),
     __param(1, (0, common_1.Res)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [create_user_dto_1.login, Object]),
+    __metadata("design:paramtypes", [create_user_dto_1.login, typeof (_a = typeof express_1.Response !== "undefined" && express_1.Response) === "function" ? _a : Object]),
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "login", null);
 __decorate([

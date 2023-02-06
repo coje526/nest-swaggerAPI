@@ -4,7 +4,7 @@ import { Response } from 'express';
 export declare class AppController {
     private readonly appService;
     constructor(appService: AppService);
-    login(data: login, response: Response): Response<any, Record<string, any>>;
+    login(data: login, response: Response): any;
     getAllUser(): {
         id: number;
         userAccount: string;
