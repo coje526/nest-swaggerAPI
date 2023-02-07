@@ -1,19 +1,8 @@
-import { login } from './dto/create-user.dto';
+import { CreateStockedRecord } from './dto/create-stocked-record.dto';
+import { StockedDto } from './dto/stocked.dto';
 export declare class AppService {
-    users: {
-        id: number;
-        userAccount: string;
-        userPassword: string;
-    }[];
-    login(data: login): boolean;
-    getAllUser(): {
-        id: number;
-        userAccount: string;
-        userPassword: string;
-    }[];
-    getById(id: string): {
-        id: number;
-        userAccount: string;
-        userPassword: string;
-    };
+    createStockedRecord(data: CreateStockedRecord): CreateStockedRecord;
+    StockedDto(data: StockedDto): StockedDto;
+    getStocksList(): void;
+    getStocks(): void;
 }

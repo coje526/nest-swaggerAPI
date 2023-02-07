@@ -1,32 +1,27 @@
 import { Injectable } from '@nestjs/common';
+import { CreateStockedRecord } from './dto/create-stocked-record.dto';
 import { login } from './dto/create-user.dto';
+import { StockedDto } from './dto/stocked.dto';
 
 @Injectable()
 export class AppService {
- 
-  users = [
-    {
-      id: 1,
-      userAccount: 'abcd1234',
-      userPassword: "false",
-    },
-  ];
-
-  login(data: login) {
-    if(data.userAccount == "nick"){
-      return true;
-    }else{
-      return false;
-    }
-  }
-
-  getAllUser() {
-    return this.users;
+  createStockedRecord(data: CreateStockedRecord) {
+    return data;
   }
  
-  getById(id: string) {
-    return this.users.find((user) => user.id.toString() === id);
+  StockedDto(data: StockedDto) {
+    return data;
   }
+
+  getStocksList() {
+      return;
+  }
+
+  getStocks() {
+    return ;
+  }
+ 
+ 
 
 
 }
