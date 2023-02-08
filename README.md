@@ -52,8 +52,7 @@ bootstrap();
 ![](https://i.imgur.com/0JltpWI.png)
 
 ---
-
-* 中間有因為少call一個function 所以打了一個POST 兩個GET 出現永遠都只有兩個的狀況
+* 有遇到因為少call一個`Controller` 的 `function` 所以打了一個POST 兩個GET 出現永遠都只有兩個的狀況
 
 *  把StockedDto放進list裡
 
