@@ -9,28 +9,17 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppService = void 0;
 const common_1 = require("@nestjs/common");
 let AppService = class AppService {
-    constructor() {
-        this.users = [
-            {
-                id: 1,
-                userAccount: 'abcd1234',
-                userPassword: "false",
-            },
-        ];
+    createStockedRecord(data) {
+        return data;
     }
-    login(data) {
-        if (data.userAccount == "nick") {
-            return true;
-        }
-        else {
-            return false;
-        }
+    StockedDto(data) {
+        return data;
     }
-    getAllUser() {
-        return this.users;
+    getStocksList() {
+        return;
     }
-    getById(id) {
-        return this.users.find((user) => user.id.toString() === id);
+    getStocks() {
+        return;
     }
 };
 AppService = __decorate([

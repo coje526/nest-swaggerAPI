@@ -12,9 +12,10 @@ async function bootstrap() {
 function setupSwagger(app: INestApplication) {
   const builder = new DocumentBuilder();
   const config = builder
-    .setTitle('UserLogin')
-    .setDescription('This is a basic Swagger document.')
+    .setTitle('SMMS MES API Document')
+    .setDescription('Base URL: localhost:3000/api')
     .setVersion('1.0')
+    .addApiKey(null, "token")
     .build();
   const document = SwaggerModule.createDocument(app, config);
   const options: SwaggerCustomOptions = {
